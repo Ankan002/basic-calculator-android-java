@@ -129,7 +129,10 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         switch (value) {
             case "all_clear":
                 input = "";
-                break;
+                output = "";
+                operation.setText(input);
+                result.setText(output);
+                return;
             case "backspace":
                 if (input.length() <= 0) return;
                 if (input.length() > 3 && (input.charAt(input.length() - 2) == '+' || input.charAt(input.length() - 2) == '-' || input.charAt(input.length() - 2) == 'x' || input.charAt(input.length() - 2) == '/' || input.charAt(input.length() - 2) == '%')) {
